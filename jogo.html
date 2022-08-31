@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>jogo eletronico</title>
+
+        <style type="text/css">
+        .CaseGame{
+            background:#0b03ff;
+            width: 200px ;
+            height: 200px;
+            font-size: 120px;
+            color: #ff0000;
+            cursor: pointer;
+
+        
+        
+        }
+
+        </style>
+
+        <script language="javascript" type="text/javascript">
+            letra = "X"
+             function joga (){
+
+            }
+
+            function joga(celula){
+                celulaclicada = document.getElementById(celula).innerHTML;
+                if (celulaclicada == "X" || celulaclicada == "0"){
+                    alert("Olá, essa casa ja foi escolhida");
+                }
+                else{
+                    document.getElementById(celula).innerHTML = letra;
+                }
+                if(letra == "X"){
+                    letra = "O";
+                }
+                else{
+                    letra = "X";
+                }
+            }
+
+           function ver (){
+            c11 = document.getElementById("celula11").innerHTML;
+            c12 = document.getElementById("celula12").innerHTML;
+            c13 = document.getElementById("celula13").innerHTML;
+            c21 = document.getElementById("celula21").innerHTML;
+            c22 = document.getElementById("celula22").innerHTML;
+            c23 = document.getElementById("celula23").innerHTML;
+            c31 = document.getElementById("celula31").innerHTML;
+            c32 = document.getElementById("celula32").innerHTML;
+            c33 = document.getElementById("celula33").innerHTML;
+           }
+
+        </script>
+
+    </head>
+    <body>
+        <h1>Jogo eletrônico</h1>
+        <table border="1">
+            <tr>
+                <td align = "center" id="celula11" class="CaseGame" onclick="joga(this.id);"></td>
+                <td align = "center" id="celula12" class="CaseGame" onclick="joga(this.id);"></td>
+                <td align = "center" id="celula13" class="CaseGame" onclick="joga(this.id);"></td>
+            </tr>
+
+            <tr>
+                <td align = "center" id="celula21" class="CaseGame" onclick="joga(this.id);"></td>
+                <td align = "center" id="celula22" class="CaseGame" onclick="joga(this.id);"></td>
+                <td align = "center" id="celula23" class="CaseGame" onclick="joga(this.id);"></td>
+            </tr>
+
+            <tr>
+                <td align = "center" id="celula31" class="CaseGame" onclick="joga(this.id);"></td>
+                <td align = "center" id="celula32" class="CaseGame" onclick="joga(this.id);"></td>
+                <td align = "center" id="celula33" class="CaseGame" onclick="joga(this.id);"></td>
+            </tr>
+            
+            </table>
+            <br><input type="button" value="novo jogo"/>
+
+        </table>
+    </body>
+
+</html>
